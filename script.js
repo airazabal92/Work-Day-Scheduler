@@ -1,5 +1,5 @@
 
-// Get the text saved in local storage or create the base array of objects to be used to store the inputted events
+// Get the text saved in local storage or create the base array of objects to be used to store events
 var events = JSON.parse(window.localStorage.getItem("events")) ||
 [
 { timeblockTextId : "textarea9AM", eventInfo : "" },
