@@ -1,3 +1,5 @@
+/* Global variable declarations 
+-------------------------------------------------------------------- */
 
 // Get the text saved in local storage or create the base array of objects to be used to store events
 var events = JSON.parse(window.localStorage.getItem("events")) ||
@@ -13,8 +15,14 @@ var events = JSON.parse(window.localStorage.getItem("events")) ||
 { timeblockTextId : "textarea5PM", eventInfo : "" },
 ];
 
-// Load saved events upon page load
+// Get the current time 
+var currentTime = moment().format("k");
 
+// Add date under page header
+var currentDayP = $("#currentDay");
+currentDayP.text(moment().format("dddd, MMMM Do"));
+
+// Load saved events upon page load
 function loadEvents(){
 
     events.forEach(eventText);
@@ -26,38 +34,36 @@ function loadEvents(){
 
 loadEvents();
 
-// Add date under page header
-var currentDayP = $("#currentDay");
-currentDayP.text(moment().format("dddd, MMMM Do"));
-
-// Get the current time 
-var currentTime = moment().format("k");
-
-var possibleTimes = [
-    { textareaEl : $("#textarea9AM"), militaryVal : 9},
-    { textareaEl : $("#textarea10AM"), militaryVal : 10},
-    { textareaEl : $("#textarea11AM"), militaryVal : 11},
-    { textareaEl : $("#textarea12PM"), militaryVal : 12},
-    { textareaEl : $("#textarea1PM"), militaryVal : 13},
-    { textareaEl : $("#textarea2PM"), militaryVal : 14,},
-    { textareaEl : $("#textarea3PM"), militaryVal : 15},
-    { textareaEl : $("#textarea4PM"), militaryVal : 16},
-    { textareaEl : $("#textarea5PM"), militaryVal : 17}
-]
-
-// Loop through array of objects of possible times and set the background color accordingly
-for (var i = 0; i < possibleTimes.length; i++){
-   
-    if (currentTime == possibleTimes[i].militaryVal){
-        possibleTimes[i].textareaEl.addClass("present");
-    }
-    else if (currentTime > possibleTimes[i].militaryVal){
-        possibleTimes[i].textareaEl.addClass("past");
-    }
-    else{
-        possibleTimes[i].textareaEl.addClass("future");
+// Determine if the timeblock is in past/present/future and style the element accordingly 
+function addBackgroundColors(){
+    var possibleTimes = [
+        { textareaEl : $("#textarea9AM"), militaryVal : 9},
+        { textareaEl : $("#textarea10AM"), militaryVal : 10},
+        { textareaEl : $("#textarea11AM"), militaryVal : 11},
+        { textareaEl : $("#textarea12PM"), militaryVal : 12},
+        { textareaEl : $("#textarea1PM"), militaryVal : 13},
+        { textareaEl : $("#textarea2PM"), militaryVal : 14,},
+        { textareaEl : $("#textarea3PM"), militaryVal : 15},
+        { textareaEl : $("#textarea4PM"), militaryVal : 16},
+        { textareaEl : $("#textarea5PM"), militaryVal : 17}
+    ]
+    
+    // Loop through array of objects of possible times and set the background color accordingly
+    for (var i = 0; i < possibleTimes.length; i++){
+       
+        if (currentTime == possibleTimes[i].militaryVal){
+            possibleTimes[i].textareaEl.addClass("present");
+        }
+        else if (currentTime > possibleTimes[i].militaryVal){
+            possibleTimes[i].textareaEl.addClass("past");
+        }
+        else{
+            possibleTimes[i].textareaEl.addClass("future");
+        }
     }
 }
+
+addBackgroundColors();
 
 // Event listener triggered when user cllicks on save button
 $(".saveBtn").click(function (){
