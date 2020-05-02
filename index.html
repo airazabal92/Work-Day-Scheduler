@@ -35,14 +35,14 @@
       <div class="col-md-12">
         <div class="input-group">
 
-          <div class="input-group-prepend">
-            <span class="input-group-text hour">9AM</span>
+          <div class="input-group-prepend text-align-right">
+            <span class="input-group-text hourSingle">9AM</span>
           </div>
 
-          <textarea id="textarea9AM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea9AM" data-hour = "9" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button9AM" data-hour="9"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -59,10 +59,10 @@
             <span class="input-group-text hour">10AM</span>
           </div>
 
-          <textarea id="textarea10AM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea10AM" data-hour = "10" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button10AM" data-hour = "10"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -79,10 +79,10 @@
             <span class="input-group-text hour">11AM</span>
           </div>
 
-          <textarea id="textarea11AM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea11AM"  data-hour = "11" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button11AM" data-hour = "11"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -96,13 +96,13 @@
         <div class="input-group mb-3">
 
           <div class="input-group-prepend ">
-            <span class="input-group-text hour">12PM</span>
+            <span class="input-group-text hour" data-hour = "12">12PM</span>
           </div>
 
-          <textarea id="textarea12PM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea12PM"  data-hour = "12" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button12PM" data-hour = "12"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -116,13 +116,13 @@
         <div class="input-group mb-3">
 
           <div class="input-group-prepend ">
-            <span class="input-group-text hour">1PM</span>
+            <span class="input-group-text hourSingle">1PM</span>
           </div>
 
-          <textarea id="textarea1PM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea1PM" class="form-control" aria-label="With textarea" data-hour = "13"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button1PM" data-hour = "13"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -136,13 +136,13 @@
         <div class="input-group mb-3">
 
           <div class="input-group-prepend ">
-            <span class="input-group-text hour">2PM</span>
+            <span class="input-group-text hourSingle">2PM</span>
           </div>
 
-          <textarea id="textarea2PM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea2PM" data-hour = "14" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button2PM" data-hour = "14"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -156,13 +156,13 @@
         <div class="input-group mb-3">
 
           <div class="input-group-prepend ">
-            <span class="input-group-text hour">3PM</span>
+            <span class="input-group-text hourSingle">3PM</span>
           </div>
 
-          <textarea id="textarea3PM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea3PM"  data-hour = "15" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button3PM" data-hour = "15"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -176,13 +176,13 @@
         <div class="input-group mb-3">
 
           <div class="input-group-prepend ">
-            <span class="input-group-text hour">4PM</span>
+            <span class="input-group-text hourSingle">4PM</span>
           </div>
 
-          <textarea id="textarea4PM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea4PM" data-hour = "16" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button4PM" data-hour = "16"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
@@ -196,24 +196,18 @@
         <div class="input-group mb-3">
 
           <div class="input-group-prepend ">
-            <span class="input-group-text hour">5PM</span>
+            <span class="input-group-text hourSingle">5PM</span>
           </div>
 
-          <textarea id="textarea5PM" class="form-control" aria-label="With textarea"></textarea>
+          <textarea id="textarea5PM" data-hour = "17" class="form-control" aria-label="With textarea"></textarea>
 
           <div class="input-group-append">
-            <button class="btn saveBtn" type="button" id="button-addon2"><i class="far fa-save fa-lg"></i>
+            <button class="btn saveBtn" type="button" id="button5PM" data-hour = "17"><i class="far fa-save fa-lg"></i>
             </button>
           </div>
         </div>
       </div>
     </div>
-
-
-
-
-
-
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
